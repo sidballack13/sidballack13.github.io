@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", sans-serif
+}
+
+.w3-row-padding img {
+	margin-bottom: 12px
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+	width: 120px;
+	background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+	margin-left: 120px
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+	#main {
+		margin-left: 0
+	}
+}
+</style>
+
+<script>
+function sendmail() {
+var x = document.getElementById("subject").value;
+	  document.getElementById("demo").innerHTML = x;
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+  Email.send({
+	Host: "smtp.gmail.com",
+	Username : 'NewTest347@gmail.com',
+	Password : "crzlglofofwfdzrn",
+	To : 'siddhanth.tk@gmail.com',
+	From : email,
+	Subject : subject,
+	Body : message,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+</script>
+
+<body class="w3-black">
+	<!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+		<a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+			<i class="fa fa-home w3-xxlarge"></i>
+			<p>HOME</p>
+		</a> <a href="#about"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i
+			class="fa fa-user w3-xxlarge"></i>
+			<p>ABOUT</p>
+		</a> <a href="#projects"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i
+			class="fas fa-database w3-xxlarge"></i>
+			<p>PROJECTS</p>
+		</a> <a href="#contact"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i
+			class="fa fa-envelope w3-xxlarge"></i>
+			<p>CONTACT</p>
+		</a>
+	</nav>
+	<!-- Navbar on small screens (Hidden on medium and large screens) -->
+	<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+		<div
+			class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+			<a href="#" class="w3-bar-item w3-button"
+				style="width: 25% !important">HOME</a> <a href="#about"
+				class="w3-bar-item w3-button" style="width: 25% !important">ABOUT</a>
+			<a href="#photos" class="w3-bar-item w3-button"
+				style="width: 25% !important">PROJECTS</a> <a href="#contact"
+				class="w3-bar-item w3-button" style="width: 25% !important">CONTACT</a>
+		</div>
+	</div>
+	<!-- Page Content -->
+	<div class="w3-padding-large" id="main">
+		<!-- Header/Home -->
+		<header class="w3-container w3-padding-32 w3-center w3-black"
+			id="home">
+			<h1 class="w3-jumbo">
+				<span class="w3-hide-small"></span> Siddhanth Kalyanpur
+			</h1>
+			<!-- End Portfolio Section -->
+			<p>Computer Science Graduate Student | Software Engineer</p>
+			<img src="index.jpg" alt="boy" class="w3-image" width="400"
+				height="500">
+		</header>
+		<!-- About Section -->
+		<div class="w3-content w3-justify w3-text-grey w3-padding-64"
+			id="about">
+			<h2 class="w3-text-light-grey">Professional Summary</h2>
+			<hr style="width: 200px" class="w3-opacity">
+			<p>Software Engineer with over 4.5+ years of experience,
+				proficient in data pipelines, data migration, application
+				development and a deep understanding of the ETL processes. Currently
+				pursuing M.S in Computer Science with a focus on Software
+				Engineering and Machine Learning.</p>
+			<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
+			<hr style="width: 200px" class="w3-opacity">
+			<p class="w3-wide">Business Warehouse</p>
+			<div class="w3-white">
+				<div class="w3-dark-grey" style="height: 28px; width: 95%"></div>
+			</div>
+			<p class="w3-wide">Android Development</p>
+			<div class="w3-white">
+				<div class="w3-dark-grey" style="height: 28px; width: 85%"></div>
+			</div>
+			<p class="w3-wide">Machine Learning</p>
+			<div class="w3-white">
+				<div class="w3-dark-grey" style="height: 28px; width: 80%"></div>
+			</div>
+			<br>
+			<div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+				<div class="w3-quarter w3-section">
+					<span class="w3-xlarge">Business Warehouse</span><br> Sap BEx,
+					Sap BW/Hana, Tableau
+				</div>
+				<div class="w3-quarter w3-section">
+					<span class="w3-xlarge">Programming Language</span><br> Java,
+					Python, Abap
+				</div>
+				<div class="w3-quarter w3-section">
+					<span class="w3-xlarge">Machine Learning</span><br> Pandas,
+					Scikit-learn, NumPy, Matplotlib, TensorFlow
+				</div>
+				<div class="w3-quarter w3-section">
+					<span class="w3-xlarge">DevOps</span><br> CI/CD, Kubernetes
+				</div>
+			</div>
+			<btn class="w3-button w3-light-grey w3-padding-large w3-section">
+			<a href="Resume.pdf" target="_blank"> <i class="fa fa-download"></i>
+			Download Resume </a></btn>
+			<div class="w3-content w3-justify w3-text-grey w3-padding-64"
+				id="about">
+				<h2 class="w3-text-light-grey">Work Experience</h2>
+				<hr style="width: 200px" class="w3-opacity">
+				</h2>
+				<img
+					src="https://professionallyspeaking.net/wp-content/uploads/2017/04/infosys-logo-1.jpg"
+					alt="boy" class="w3-image" width="50" height="50"
+					style="float: left">
+				<h5 class="w3-text-light-grey ">
+					&nbsp;&nbsp;&nbsp;Infosys | Technology Analyst | Feb 2017 - Aug
+					2021
+					</p>
+					<div class="w3-content w3-justify w3-text-grey " id="about">
+						<p"w3-text-greyw3-padding-64">
+						<ul>
+							<li>Created Aggregation levels, filters, planning functions
+								and planning sequences and built input level queries on top of
+								aggregation level.</li>
+							<li>Performance Tuning: Worked on performance Tuning by
+								using Aggregates, Compression, Line Item Dimension, High
+								Cardinality and Housekeeping activities for better performance
+								on Hana query and BW system.</li>
+							<li>Experience in transporting objects from Development to
+								Production systems.</li>
+							<li>Extraction : Worked on both standard and generic
+								extractors. Hands on experience in extracting data from SD and
+								MM modules to BW</li>
+							<li>ABAP programming : Developed a ABAP program to avoid
+								locking scenarios in process chains updating the same BW objects
+								concurrently.</li>
+							<li>Report Generation : Expertise in creating BEx queries,
+								variables, calculated key figures (CKF) and restricted key
+								figures (RKF).</li>
+							<li>Data Modelling : Created flows containing custom
+								InfoObjects, DataSources, Infopackages, DTP’s, Transformations,
+								DSO’s, InfoCubes, MultiProviders and queries on top of the
+								MultiProviders.</li>
+							<li>Creating Process chains for newly added data flows.</li>
+						</ul>
+						</p>
+					</div>
+					<!-- Education -->
+					<h3 class="w3-padding-32 w3-text-light-grey">Education</h3>
+					<hr style="width: 200px" class="w3-opacity">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/5/53/George_Mason_University_logo.svg"
+						alt="boy" class="w3-image" width="50" height="50"
+						style="float: left">
+					<h5 class="w3-text-light-grey ">
+						&nbsp;&nbsp;&nbsp;George Mason University | Masters in Computer
+						Science | Aug 2021 - May 2023
+						</p><br>
+						<p style = "font-size:12px"> <a href= "https://100.26.166.189/StudentSurveyForm/index.html" >Please let me know what you think of my college </a></p>
+						<br></br> <img
+							src="http://www.shikshapath.com/wp-content/uploads/2019/03/Mumbai-University.jpg"
+							alt="boy" class="w3-image" width="50" height="50"
+							style="float: left">
+						<h5 class="w3-text-light-grey ">
+							&nbsp;&nbsp;&nbsp;University of Mumbai | Bachelors in Computer
+							Engineering | Aug 2012 - May 2016
+							</p>
+							<!-- End About Section -->
+			</div>
+		</div>
+
+		<div class="w3-padding-64 w3-content" id="projects">
+			<h3 class="w3-padding-16 w3-text-light-grey">My Projects</h3>
+			<div class="w3-row-padding" style="margin: 0 -16px">
+				<div class="w3-col w3-margin-bottom">
+					<ul
+						class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+						<li class="w3-dark-grey w3-xlarge w3-padding-32">Bluetooth
+							Attendance</li>
+						<li class="w3-padding-16">Android Framework</li>
+						<p>
+							Scans the vicinity for students' bluetooth devices and matches
+							them against a database of students to check attendance and save
+							to excel sheets. The application saves the bluetoothdevice
+							objects of the discovered devices into an arraylist. Bluetooth
+							addresses from this arraylist are stored in a string array and
+							then matched with a database of students' roll numbers and
+							corresponding bluetooth addresses. The addresses with a match in
+							the database are marked present, others absent. The final list of
+							roll numbers and attendance for the corresponding roll numbers (1
+							for present, 0 for absent) is then saved into an excel
+							spreadsheet and attached directly to a mail with the date and
+							time as the file name and email subject for the teacher to keep
+							track.<br>Uses the JExcelApi Java API to create and modify
+							excel spreadsheets.</br>Uses the Android SQLiteAssetHelper library to
+							access the SQLiteDatabase.
+						</p>
+						<li class="w3-light-grey w3-padding-24">
+							<button
+								class="w3-button w3-white w3-padding-large w3-hover-black">
+								<a href="https://github.com/sidballack13/Bluetooth-Attendance"
+									target="_blank" rel="noopener noreferrer"
+									class="w3-hover-text-blue">View Project</a>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<!-- End Grid/Pricing tables -->
+			</div>
+		</div>
+		<!-- Contact Section -->
+		<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+			<h2 class="w3-text-light-grey">Contact Me</h2>
+			<hr style="width: 200px" class="w3-opacity">
+			<div class="w3-section">
+				<p>
+					<i
+						class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+					Fairfax,Va,US
+				</p>
+				<p>
+					<i
+						class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+					Phone: +1 (703)-453-2267
+				</p>
+				<p>
+					<i
+						class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right">
+					</i> Email: skalyanp@gmu.edu
+				</p>
+			</div>
+			<br>
+			<p>Let's get in touch. Send me a message:</p>
+			<form method="post">
+				<p>
+					<input class="w3-input w3-padding-16" type="text"
+						placeholder="Name" required name="Name" id="name">
+				</p>
+				<p>
+					<input class="w3-input w3-padding-16" type="email"
+						placeholder="Email" required name="Email" id="email">
+				</p>
+				<p>
+					<input class="w3-input w3-padding-16" type="text"
+						placeholder="Subject" required name="Subject" id="subject">
+				</p>
+				<p>
+					<input class="w3-input w3-padding-16" type="text"
+						placeholder="Message" required name="Message" id="message">
+				</p>
+				<p>
+					<anchor>
+					<button class="w3-button w3-light-grey w3-padding-large"
+						onclick="sendmail()" value="Send Message">
+						<i class="fa fa-paper-plane"></i> SEND MESSAGE
+					</button>
+					<!--  <input type="button" value="Send Message" onclick="sendmail()"/> -->
+				</p>
+				<!-- <p id="demo">click worked</p> -->
+
+				<!-- <script>
+					function myFunction() {
+  					var x = document.getElementById("subject").value;
+  					document.getElementById("demo").innerHTML = x;
+					}
+				</script> -->
+			</form>
+
+			<!-- End Contact Section -->
+		</div>
+		<!-- Footer -->
+		<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+			<a href="https://www.twitter.com/sidballack13/"
+				class="fa fa-twitter w3-hover-opacity" target="_blank"
+				rel="noopener noreferrer">&nbsp;&nbsp;</a> <a
+				href="https://www.linkedin.com/in/sidtk"
+				class="fa fa-linkedin w3-hover-opacity" target="_blank"
+				rel="noopener noreferrer"></a>
+			<p class="w3-medium">
+				Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+					target="_blank" class="w3-hover-text-green">w3.css</a>
+			</p>
+			<!-- End footer -->
+		</footer>
+		<!-- END PAGE CONTENT -->
+	</div>
+</body>
+
+</html>
